@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tejashwini Mykala | Data Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 30px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: #66fcf1;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s forwards;
+    }
+
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.9s; }
+    section:nth-of-type(5) { animation-delay: 1.2s; }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #66fcf1;
+      border-bottom: 2px solid #66fcf1;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    .project, .experience {
+      margin-bottom: 25px;
+    }
+
+    .project h3, .experience h3 {
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .project p, .experience p {
+      color: #d3d3d3;
+    }
+
+    .contact-links a {
+      color: #66fcf1;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-links a:hover {
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tejashwini Mykala</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Tejashwini Mykala, a Data Analyst passionate about turning raw data into stories and insights. With 2 years of IT experience and a Master’s in Information Systems & Technology, I thrive on solving problems using SQL, Python, and visualization tools like Power BI and Tableau.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="experience">
+      <h3>Data Analyst | DXC Technology</h3>
+      <p>June 2021 – August 2023</p>
+      <p>Worked with storage data and reporting systems to support enterprise clients. Developed Excel/SQL solutions and dashboards to improve service reliability and client visibility. Collaborated cross-functionally to automate routine analytics tasks.</p>
+    </div>
+
+    <div class="experience">
+      <h3>Teaching Assistant | University of North Texas</h3>
+      <p>Jan 2024 – May 2024</p>
+      <p>Supported the Information Security Management course by helping students understand key concepts, grading assignments, and assisting with technical queries.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Sales Dashboard Insights</h3>
+      <p>Created an Excel + Power BI dashboard to analyze KPIs and regional trends. Enabled leadership to make data-driven decisions.</p>
+    </div>
+
+    <div class="project">
+      <h3>Data Cleaning & Analysis with SQL</h3>
+      <p>Wrote efficient queries to clean and analyze millions of records for performance metrics using PostgreSQL and Python.</p>
+    </div>
+
+    <div class="project">
+      <h3>AI Resume Analyzer (LLM-based)</h3>
+      <p>Built a Python tool using OpenAI to match resumes with job descriptions. Increased recruiter efficiency in screening.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let's connect! Email me at: <a href="mailto:tejashwinimykala@gmail.com" style="color: #66fcf1;">tejashwinimykala@gmail.com</a></p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/tejashwini-mykala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/tejashwinimykala" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Tejashwini Mykala. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
