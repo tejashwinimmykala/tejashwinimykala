@@ -1,12 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tejashwini Mykala | Python Developer with AI/ML</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tejashwini Mykala | Python Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -14,66 +18,189 @@
       color: #f1f5f9;
       line-height: 1.6;
     }
-    header {
-      background: #1e293b;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    h1, h2 {
-      color: #38bdf8;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .card {
-      background: #1e293b;
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      margin-bottom: 1rem;
-    }
     a {
       color: #38bdf8;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1e293b;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.75rem 0;
+    }
+    nav li {
+      margin: 0 1.25rem;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 0.25rem;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #2563eb;
+      color: #fff;
+      outline: none;
+    }
+
+    /* Header */
+    header {
+      padding: 6rem 1rem 2rem;
+      text-align: center;
+      background: #1e293b;
+      box-shadow: inset 0 -4px 8px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+    header h1 {
+      margin: 0 0 0.3rem;
+      font-size: 2.5rem;
+      color: #38bdf8;
+    }
+    header p {
+      margin: 0.25rem 0;
+      font-size: 1.1rem;
+      color: #cbd5e1;
+    }
+    header p a {
+      color: #60a5fa;
+      font-weight: 600;
+    }
+
+    /* Main container */
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #60a5fa;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 0.3rem;
+    }
+
+    /* Cards */
+    .card {
+      background: #1e293b;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 0.5rem;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 1rem;
     }
+    .skills-grid > div {
+      background: #334155;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Project titles */
+    .project-title {
+      color: #38bdf8;
+      margin: 0 0 0.5rem;
+    }
+    .project-link {
+      font-size: 0.9rem;
+      color: #60a5fa;
+      font-weight: 600;
+    }
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Resume button */
+    .btn-resume {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.4rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      user-select: none;
+    }
+    .btn-resume:hover, .btn-resume:focus {
+      background: #3b82f6;
+      outline: none;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1rem 1rem 2rem;
       color: #94a3b8;
       font-size: 0.875rem;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      nav li {
+        margin: 0;
+      }
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#github">GitHub</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Tejashwini Mykala</h1>
-    <p>Python Developer with AI/ML | Data Analyst | GenAI Enthusiast</p>
+    <p>Python Developer | AI/ML Enthusiast</p>
     <p>
       <a href="mailto:tejashwinimykala@gmail.com">Email</a> |
-      <a href="https://www.linkedin.com/in/tejashwini-mykala/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/tejashwini-mykala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
   </header>
+
   <main>
-    <section class="section">
-      <h2>✨ About Me</h2>
+    <section id="about">
+      <h2>About Me</h2>
       <div class="card">
-        <p>Results-driven Python developer with 2+ years of hands-on experience in data transformation, automation, and AI-powered application development. I bring a strong foundation in GenAI, LLMs, and data analytics, and I'm passionate about building smart, scalable tools that make data work harder and smarter.</p>
+        <p>Passionate Python Developer with 2+ years of experience building efficient, scalable software and AI/ML applications. Skilled in automation, data processing, and leveraging modern AI frameworks to deliver innovative solutions. Committed to continuous learning and contributing to open-source projects.</p>
       </div>
     </section>
 
-    <section class="section">
-      <h2>🔧 Skills</h2>
+    <section id="skills">
+      <h2>Skills</h2>
       <div class="card skills-grid">
         <div><strong>Languages:</strong> Python, SQL, R, HTML/CSS</div>
         <div><strong>Tools:</strong> Power BI, Tableau, Excel</div>
@@ -84,42 +211,45 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2>📅 Projects</h2>
+    <section id="projects">
+      <h2>Projects</h2>
       <div class="card">
-        <h3>Sales Dashboard Insights</h3>
-        <p>Built interactive dashboards in Power BI and Excel using a large Kaggle dataset. Enabled clear insights into regional sales and marketing strategy improvements.</p>
+        <h3 class="project-title">Sales Dashboard Insights</h3>
+        <p>Created interactive dashboards in Power BI and Excel using large datasets to drive data-informed decisions on sales and marketing strategies.</p>
       </div>
       <div class="card">
-        <h3>Weather App (Python + API)</h3>
-        <p>Developed a command-line weather app that fetches real-time weather data using OpenWeatherMap API and displays it with error handling and formatted output. <a href="#">GitHub Repo</a></p>
+        <h3 class="project-title">Weather App (Python + API)</h3>
+        <p>Developed a command-line weather app using OpenWeatherMap API to fetch and display real-time weather data with error handling. <a href="#" class="project-link">GitHub Repo</a></p>
       </div>
       <div class="card">
-        <h3>Student Grades Visualizer</h3>
-        <p>Used Python and Matplotlib to visualize student performance across multiple semesters, helping academic advisors with trend insights and risk analysis. <a href="#">GitHub Repo</a></p>
+        <h3 class="project-title">Student Grades Visualizer</h3>
+        <p>Used Python and Matplotlib to visualize student performance trends and support academic advisors in decision-making. <a href="#" class="project-link">GitHub Repo</a></p>
       </div>
       <div class="card">
-        <h3>AI Chatbot (LangChain)</h3>
-        <p>Built a basic chatbot using LangChain and OpenAI models, designed to answer course-related questions and simulate a tutoring assistant. <a href="#">GitHub Repo</a></p>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>📄 Resume</h2>
-      <div class="card">
-        <p>Download my latest resume <a href="TEJASHWINI%20MYKALA_Python%20Engineer.pdf" target="_blank">here</a>.</p>
+        <h3 class="project-title">AI Chatbot (LangChain)</h3>
+        <p>Built an AI chatbot using LangChain and OpenAI models to answer course questions and provide tutoring assistance. <a href="#" class="project-link">GitHub Repo</a></p>
       </div>
     </section>
 
-    <section class="section">
-      <h2>💻 GitHub</h2>
+    <section id="resume">
+      <h2>Resume</h2>
       <div class="card">
-        <p>Visit my GitHub profile: <a href="https://github.com/tejashwinimmykala/tejashwinimykala" target="_blank">github.com/tejashwinimmykala/tejashwinimykala</a></p>
+        <p>Click the button below to download my latest resume.</p>
+        <a href="https://github.com/tejashwinimmykala/tejashwinimykala/raw/main/TEJASHWINI%20MYKALA_Python%20Engineer.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume">Download Resume (PDF)</a>
+      </div>
+    </section>
+
+    <section id="github">
+      <h2>GitHub</h2>
+      <div class="card">
+        <p>Check out my code and projects on <a href="https://github.com/tejashwinimmykala" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
       </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Tejashwini Mykala. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
